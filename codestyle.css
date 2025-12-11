@@ -1,0 +1,132 @@
+
+/* ----- 设计令牌 (Design Tokens) ----- */
+:root {
+  /* 主品牌色 */
+  --clr-primary: #667eea;
+  --clr-primary-dark: #764ba2;
+  --clr-secondary: #17a2b8;
+  --clr-warning: #ffc107;
+  --clr-danger: #ff6b6b;
+
+  /* 中性色 */
+  --clr-bg: #f5f7fa;
+  --clr-bg-card: rgba(255, 255, 255, 0.6);
+  --clr-text: #333;
+  --clr-text-light: #555;
+  --clr-border: rgba(0, 0, 0, 0.08);
+  --clr-shadow: rgba(0, 0, 0, 0.05);
+
+  /* 毛玻璃 */
+  --blur: blur(10px);
+  --radius: 12px;
+  --radius-lg: 16px;
+
+  /* 动效 */
+  --transition: all 0.3s ease;
+}
+
+/* ----- 全局重置 ----- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  background: var(--clr-bg);
+  color: var(--clr-text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ----- 通用组件 ----- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: var(--radius);
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 2px 8px var(--clr-shadow);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px var(--clr-shadow);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-primary-dark) 100%);
+  color: #fff;
+}
+
+.btn-secondary {
+  background: var(--clr-secondary);
+  color: #fff;
+}
+
+.btn-warning {
+  background: var(--clr-warning);
+  color: #000;
+}
+
+.btn-danger {
+  background: var(--clr-danger);
+  color: #fff;
+}
+
+/* ----- 卡片 ----- */
+.card {
+  background: var(--clr-bg-card);
+  backdrop-filter: var(--blur);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 20px var(--clr-shadow);
+  padding: 20px;
+}
+
+/* ----- 输入 ----- */
+.input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  transition: border 0.3s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--clr-primary);
+}
+
+/* ----- 工具类 ----- */
+.text-center {
+  text-align: center;
+}
+
+.mt-1 {
+  margin-top: 8px;
+}
+
+.mt-2 {
+  margin-top: 16px;
+}
+
+.hidden {
+  display: none;
+}
+
+
+   
+   然后给元素添加相应类名即可，例如：
+   <button class="btn btn-primary">Save</button>
+   <div class="card">内容</div>
+   ========================================================== */
